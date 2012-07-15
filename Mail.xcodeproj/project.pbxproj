@@ -1,0 +1,706 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8437495315AD11F400157F9C /* Cocoa.framework */; };
+		8437495E15AD11F400157F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8437495C15AD11F400157F9C /* InfoPlist.strings */; };
+		8437496015AD11F400157F9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437495F15AD11F400157F9C /* main.m */; };
+		8437496415AD11F400157F9C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8437496215AD11F400157F9C /* Credits.rtf */; };
+		8437496715AD11F400157F9C /* CFIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437496615AD11F400157F9C /* CFIAppDelegate.m */; };
+		8437496A15AD11F400157F9C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437496815AD11F400157F9C /* MainMenu.xib */; };
+		8437497215AD16A800157F9C /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437497115AD16A800157F9C /* INAppStoreWindow.m */; };
+		8437497D15AD1D0D00157F9C /* CFISplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437497C15AD1D0D00157F9C /* CFISplitView.m */; };
+		8437498015AD1FF100157F9C /* CFIMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437497F15AD1FF100157F9C /* CFIMenuView.m */; };
+		8437499115AE052100157F9C /* JAListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498715AE051E00157F9C /* JAListView.m */; };
+		8437499215AE052100157F9C /* JASectionedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498A15AE051F00157F9C /* JASectionedListView.m */; };
+		8437499315AE052100157F9C /* JAObjectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498C15AE052000157F9C /* JAObjectListView.m */; };
+		8437499415AE052100157F9C /* JAListViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498E15AE052100157F9C /* JAListViewItem.m */; };
+		8437499515AE052100157F9C /* NSIndexPath+JAListViewExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437499015AE052100157F9C /* NSIndexPath+JAListViewExtensions.m */; };
+		8437499B15AE05E400157F9C /* DemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437499915AE05E400157F9C /* DemoView.m */; };
+		8437499C15AE05E400157F9C /* DemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437499A15AE05E400157F9C /* DemoView.xib */; };
+		8437499F15AE06CD00157F9C /* JAObjectListViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437499E15AE06CC00157F9C /* JAObjectListViewItem.m */; };
+		843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843749A015AE06F700157F9C /* QuartzCore.framework */; };
+		843749A315AE0BAA00157F9C /* ActionStepOneHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 843749A215AE0BAA00157F9C /* ActionStepOneHover.png */; };
+		843749A615AE0C4200157F9C /* ActionStepTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = 843749A415AE0C4200157F9C /* ActionStepTwo.png */; };
+		843749A715AE0C4200157F9C /* ActionStepThree.png in Resources */ = {isa = PBXBuildFile; fileRef = 843749A515AE0C4200157F9C /* ActionStepThree.png */; };
+		843749A915AE3F0000157F9C /* ToolbarCompose.png in Resources */ = {isa = PBXBuildFile; fileRef = 843749A815AE3F0000157F9C /* ToolbarCompose.png */; };
+		843749AF15AE451400157F9C /* CFIComposeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 843749AD15AE451200157F9C /* CFIComposeWindow.m */; };
+		843749B015AE451400157F9C /* CFIComposeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843749AE15AE451300157F9C /* CFIComposeWindow.xib */; };
+		843749B515AE4B2D00157F9C /* CFIMailBodyPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 843749B415AE4B2C00157F9C /* CFIMailBodyPane.m */; };
+		84374A1015AE533D00157F9C /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84374A0715AE532F00157F9C /* MailCore.framework */; };
+		84374A4B15AE5B2C00157F9C /* ActionStepOne.png in Resources */ = {isa = PBXBuildFile; fileRef = 84374A4A15AE5B2C00157F9C /* ActionStepOne.png */; };
+		84374A5115AE5E5800157F9C /* DKHoverButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A5015AE5E5700157F9C /* DKHoverButtonCell.m */; };
+		84374A5415AE66EC00157F9C /* ActionStepThreeHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 84374A5215AE66EB00157F9C /* ActionStepThreeHover.png */; };
+		84374A5515AE66EC00157F9C /* ActionStepTwoHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 84374A5315AE66EC00157F9C /* ActionStepTwoHover.png */; };
+		84374A5915AF509300157F9C /* CFIToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A5815AF509300157F9C /* CFIToolbar.m */; };
+		84374A6015AF55F200157F9C /* CFIFormFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A5F15AF55F200157F9C /* CFIFormFields.m */; };
+		84374A6315AF5B1200157F9C /* CFIBackgroundField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A6215AF5B1200157F9C /* CFIBackgroundField.m */; };
+		8499DD1115B0CC66006A4B61 /* SendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1015B0CC66006A4B61 /* SendBtn.png */; };
+		8499DD1315B0CEEF006A4B61 /* AttachSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1215B0CEEF006A4B61 /* AttachSelected.png */; };
+		8499DD1715B0D2D2006A4B61 /* SaveBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1615B0D2D2006A4B61 /* SaveBtn.png */; };
+		8499DD1915B0DACD006A4B61 /* MailIcns.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1815B0DACD006A4B61 /* MailIcns.icns */; };
+		8499DD1C15B0E0BF006A4B61 /* CFIFontMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD1B15B0E0BF006A4B61 /* CFIFontMenu.m */; };
+		8499DD2015B0E93C006A4B61 /* ParagraphCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1D15B0E93C006A4B61 /* ParagraphCenter.png */; };
+		8499DD2115B0E93C006A4B61 /* ParagraphLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1E15B0E93C006A4B61 /* ParagraphLeft.png */; };
+		8499DD2215B0E93C006A4B61 /* ParagraphRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1F15B0E93C006A4B61 /* ParagraphRight.png */; };
+		8499DD2615B0EAEA006A4B61 /* ParagraphLeftSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD2315B0EAEA006A4B61 /* ParagraphLeftSelected.png */; };
+		8499DD2715B0EAEA006A4B61 /* ParagraphCenterSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD2415B0EAEA006A4B61 /* ParagraphCenterSelected.png */; };
+		8499DD2815B0EAEA006A4B61 /* ParagraphRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD2515B0EAEA006A4B61 /* ParagraphRightSelected.png */; };
+		8499DD3015B0F956006A4B61 /* ToolbarAttachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD2F15B0F956006A4B61 /* ToolbarAttachment.png */; };
+		8499DD3415B0FB84006A4B61 /* mail10-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD3315B0FB84006A4B61 /* mail10-1.png */; };
+		8499DD3C15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD3B15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8499DD4815B11E10006A4B61 /* CFIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD4715B11E0F006A4B61 /* CFIImageView.m */; };
+		84D8AFC315AF9508006E58E2 /* MKColorWell+Bindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFBA15AF9508006E58E2 /* MKColorWell+Bindings.m */; };
+		84D8AFC415AF9508006E58E2 /* MKColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFBC15AF9508006E58E2 /* MKColorPickerView.m */; };
+		84D8AFC515AF9508006E58E2 /* MKColorSwatchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFBE15AF9508006E58E2 /* MKColorSwatchCell.m */; };
+		84D8AFC615AF9508006E58E2 /* MKColorSwatchMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFC015AF9508006E58E2 /* MKColorSwatchMatrix.m */; };
+		84D8AFC715AF9508006E58E2 /* MKColorWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFC215AF9508006E58E2 /* MKColorWell.m */; };
+		84D8AFCB15AF9F01006E58E2 /* CFIMenuField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFCA15AF9F01006E58E2 /* CFIMenuField.m */; };
+		84D8AFCE15AFA9A0006E58E2 /* CFIPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFCD15AFA9A0006E58E2 /* CFIPopUpButton.m */; };
+		84D8AFD215AFAE6A006E58E2 /* CFIComposeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFD115AFAE6A006E58E2 /* CFIComposeView.m */; };
+		84D8AFDB15B0A73C006E58E2 /* LIEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFD815B0A73B006E58E2 /* LIEffect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84D8AFDC15B0A73C006E58E2 /* LIFlipEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFDA15B0A73B006E58E2 /* LIFlipEffect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84D8AFE015B0A824006E58E2 /* CFIMailIconWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFDF15B0A824006E58E2 /* CFIMailIconWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84374A0615AE532F00157F9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843749EF15AE532E00157F9C /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = MailCore;
+		};
+		84374A0815AE532F00157F9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843749EF15AE532E00157F9C /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8618B5710DADB5C00C41188;
+			remoteInfo = "MailCore iOS";
+		};
+		84374A0A15AE532F00157F9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843749EF15AE532E00157F9C /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8DFCF4915801A5000C01975;
+			remoteInfo = Tests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8437494F15AD11F400157F9C /* .Mail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .Mail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8437495315AD11F400157F9C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8437495615AD11F400157F9C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8437495715AD11F400157F9C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8437495815AD11F400157F9C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8437495B15AD11F400157F9C /* Mail-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mail-Info.plist"; sourceTree = "<group>"; };
+		8437495D15AD11F400157F9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8437495F15AD11F400157F9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8437496115AD11F400157F9C /* Mail-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mail-Prefix.pch"; sourceTree = "<group>"; };
+		8437496315AD11F400157F9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8437496515AD11F400157F9C /* CFIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFIAppDelegate.h; sourceTree = "<group>"; };
+		8437496615AD11F400157F9C /* CFIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFIAppDelegate.m; sourceTree = "<group>"; };
+		8437496915AD11F400157F9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8437497015AD16A800157F9C /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		8437497115AD16A800157F9C /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		8437497B15AD1D0D00157F9C /* CFISplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFISplitView.h; sourceTree = "<group>"; };
+		8437497C15AD1D0D00157F9C /* CFISplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFISplitView.m; sourceTree = "<group>"; };
+		8437497E15AD1FF100157F9C /* CFIMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIMenuView.h; sourceTree = "<group>"; };
+		8437497F15AD1FF100157F9C /* CFIMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIMenuView.m; sourceTree = "<group>"; };
+		8437498615AE051E00157F9C /* JAListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAListView.h; sourceTree = "<group>"; };
+		8437498715AE051E00157F9C /* JAListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAListView.m; sourceTree = "<group>"; };
+		8437498815AE051E00157F9C /* JAEdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAEdgeInsets.h; sourceTree = "<group>"; };
+		8437498915AE051E00157F9C /* JASectionedListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASectionedListView.h; sourceTree = "<group>"; };
+		8437498A15AE051F00157F9C /* JASectionedListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASectionedListView.m; sourceTree = "<group>"; };
+		8437498B15AE051F00157F9C /* JAObjectListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAObjectListView.h; sourceTree = "<group>"; };
+		8437498C15AE052000157F9C /* JAObjectListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAObjectListView.m; sourceTree = "<group>"; };
+		8437498D15AE052000157F9C /* JAListViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAListViewItem.h; sourceTree = "<group>"; };
+		8437498E15AE052100157F9C /* JAListViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAListViewItem.m; sourceTree = "<group>"; };
+		8437498F15AE052100157F9C /* NSIndexPath+JAListViewExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JAListViewExtensions.h"; sourceTree = "<group>"; };
+		8437499015AE052100157F9C /* NSIndexPath+JAListViewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+JAListViewExtensions.m"; sourceTree = "<group>"; };
+		8437499815AE05E400157F9C /* DemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoView.h; sourceTree = "<group>"; };
+		8437499915AE05E400157F9C /* DemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoView.m; sourceTree = "<group>"; };
+		8437499A15AE05E400157F9C /* DemoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoView.xib; sourceTree = "<group>"; };
+		8437499D15AE06CC00157F9C /* JAObjectListViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAObjectListViewItem.h; sourceTree = "<group>"; };
+		8437499E15AE06CC00157F9C /* JAObjectListViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAObjectListViewItem.m; sourceTree = "<group>"; };
+		843749A015AE06F700157F9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		843749A215AE0BAA00157F9C /* ActionStepOneHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionStepOneHover.png; sourceTree = "<group>"; };
+		843749A415AE0C4200157F9C /* ActionStepTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionStepTwo.png; sourceTree = "<group>"; };
+		843749A515AE0C4200157F9C /* ActionStepThree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionStepThree.png; sourceTree = "<group>"; };
+		843749A815AE3F0000157F9C /* ToolbarCompose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarCompose.png; sourceTree = "<group>"; };
+		843749AC15AE451100157F9C /* CFIComposeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIComposeWindow.h; sourceTree = "<group>"; };
+		843749AD15AE451200157F9C /* CFIComposeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIComposeWindow.m; sourceTree = "<group>"; };
+		843749AE15AE451300157F9C /* CFIComposeWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIComposeWindow.xib; sourceTree = "<group>"; };
+		843749B315AE4B2B00157F9C /* CFIMailBodyPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIMailBodyPane.h; sourceTree = "<group>"; };
+		843749B415AE4B2C00157F9C /* CFIMailBodyPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIMailBodyPane.m; sourceTree = "<group>"; };
+		843749CB15AE51A600157F9C /* MailCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MailCore.framework; sourceTree = "<group>"; };
+		843749EF15AE532E00157F9C /* MailCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MailCore.xcodeproj; path = ../MailCore/MailCore.xcodeproj; sourceTree = "<group>"; };
+		84374A4A15AE5B2C00157F9C /* ActionStepOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionStepOne.png; sourceTree = "<group>"; };
+		84374A4F15AE5E5700157F9C /* DKHoverButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKHoverButtonCell.h; sourceTree = "<group>"; };
+		84374A5015AE5E5700157F9C /* DKHoverButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKHoverButtonCell.m; sourceTree = "<group>"; };
+		84374A5215AE66EB00157F9C /* ActionStepThreeHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionStepThreeHover.png; sourceTree = "<group>"; };
+		84374A5315AE66EC00157F9C /* ActionStepTwoHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionStepTwoHover.png; sourceTree = "<group>"; };
+		84374A5715AF509300157F9C /* CFIToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIToolbar.h; sourceTree = "<group>"; };
+		84374A5815AF509300157F9C /* CFIToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIToolbar.m; sourceTree = "<group>"; };
+		84374A5E15AF55F200157F9C /* CFIFormFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIFormFields.h; sourceTree = "<group>"; };
+		84374A5F15AF55F200157F9C /* CFIFormFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIFormFields.m; sourceTree = "<group>"; };
+		84374A6115AF5B1200157F9C /* CFIBackgroundField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIBackgroundField.h; sourceTree = "<group>"; };
+		84374A6215AF5B1200157F9C /* CFIBackgroundField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIBackgroundField.m; sourceTree = "<group>"; };
+		8499DD1015B0CC66006A4B61 /* SendBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SendBtn.png; sourceTree = "<group>"; };
+		8499DD1215B0CEEF006A4B61 /* AttachSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AttachSelected.png; sourceTree = "<group>"; };
+		8499DD1615B0D2D2006A4B61 /* SaveBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SaveBtn.png; sourceTree = "<group>"; };
+		8499DD1815B0DACD006A4B61 /* MailIcns.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MailIcns.icns; sourceTree = "<group>"; };
+		8499DD1A15B0E0BF006A4B61 /* CFIFontMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIFontMenu.h; sourceTree = "<group>"; };
+		8499DD1B15B0E0BF006A4B61 /* CFIFontMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIFontMenu.m; sourceTree = "<group>"; };
+		8499DD1D15B0E93C006A4B61 /* ParagraphCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParagraphCenter.png; sourceTree = "<group>"; };
+		8499DD1E15B0E93C006A4B61 /* ParagraphLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParagraphLeft.png; sourceTree = "<group>"; };
+		8499DD1F15B0E93C006A4B61 /* ParagraphRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParagraphRight.png; sourceTree = "<group>"; };
+		8499DD2315B0EAEA006A4B61 /* ParagraphLeftSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParagraphLeftSelected.png; sourceTree = "<group>"; };
+		8499DD2415B0EAEA006A4B61 /* ParagraphCenterSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParagraphCenterSelected.png; sourceTree = "<group>"; };
+		8499DD2515B0EAEA006A4B61 /* ParagraphRightSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParagraphRightSelected.png; sourceTree = "<group>"; };
+		8499DD2F15B0F956006A4B61 /* ToolbarAttachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarAttachment.png; sourceTree = "<group>"; };
+		8499DD3315B0FB84006A4B61 /* mail10-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail10-1.png"; sourceTree = "<group>"; };
+		8499DD3A15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+NSViewAnimationWithBlocks.h"; sourceTree = "<group>"; };
+		8499DD3B15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+NSViewAnimationWithBlocks.m"; sourceTree = "<group>"; };
+		8499DD4615B11E0E006A4B61 /* CFIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIImageView.h; sourceTree = "<group>"; };
+		8499DD4715B11E0F006A4B61 /* CFIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIImageView.m; sourceTree = "<group>"; };
+		84D8AFB915AF9508006E58E2 /* MKColorWell+Bindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKColorWell+Bindings.h"; sourceTree = "<group>"; };
+		84D8AFBA15AF9508006E58E2 /* MKColorWell+Bindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKColorWell+Bindings.m"; sourceTree = "<group>"; };
+		84D8AFBB15AF9508006E58E2 /* MKColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKColorPickerView.h; sourceTree = "<group>"; };
+		84D8AFBC15AF9508006E58E2 /* MKColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKColorPickerView.m; sourceTree = "<group>"; };
+		84D8AFBD15AF9508006E58E2 /* MKColorSwatchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKColorSwatchCell.h; sourceTree = "<group>"; };
+		84D8AFBE15AF9508006E58E2 /* MKColorSwatchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKColorSwatchCell.m; sourceTree = "<group>"; };
+		84D8AFBF15AF9508006E58E2 /* MKColorSwatchMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKColorSwatchMatrix.h; sourceTree = "<group>"; };
+		84D8AFC015AF9508006E58E2 /* MKColorSwatchMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKColorSwatchMatrix.m; sourceTree = "<group>"; };
+		84D8AFC115AF9508006E58E2 /* MKColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKColorWell.h; sourceTree = "<group>"; };
+		84D8AFC215AF9508006E58E2 /* MKColorWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKColorWell.m; sourceTree = "<group>"; };
+		84D8AFC915AF9F01006E58E2 /* CFIMenuField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIMenuField.h; sourceTree = "<group>"; };
+		84D8AFCA15AF9F01006E58E2 /* CFIMenuField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIMenuField.m; sourceTree = "<group>"; };
+		84D8AFCC15AFA9A0006E58E2 /* CFIPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIPopUpButton.h; sourceTree = "<group>"; };
+		84D8AFCD15AFA9A0006E58E2 /* CFIPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIPopUpButton.m; sourceTree = "<group>"; };
+		84D8AFD015AFAE6A006E58E2 /* CFIComposeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIComposeView.h; sourceTree = "<group>"; };
+		84D8AFD115AFAE6A006E58E2 /* CFIComposeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIComposeView.m; sourceTree = "<group>"; };
+		84D8AFD715B0A73B006E58E2 /* LIEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIEffect.h; sourceTree = "<group>"; };
+		84D8AFD815B0A73B006E58E2 /* LIEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIEffect.m; sourceTree = "<group>"; };
+		84D8AFD915B0A73B006E58E2 /* LIFlipEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIFlipEffect.h; sourceTree = "<group>"; };
+		84D8AFDA15B0A73B006E58E2 /* LIFlipEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIFlipEffect.m; sourceTree = "<group>"; };
+		84D8AFDE15B0A824006E58E2 /* CFIMailIconWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIMailIconWindow.h; sourceTree = "<group>"; };
+		84D8AFDF15B0A824006E58E2 /* CFIMailIconWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIMailIconWindow.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8437494C15AD11F400157F9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84374A1015AE533D00157F9C /* MailCore.framework in Frameworks */,
+				843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */,
+				8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8437494415AD11F300157F9C = {
+			isa = PBXGroup;
+			children = (
+				8499DD1815B0DACD006A4B61 /* MailIcns.icns */,
+				843749EF15AE532E00157F9C /* MailCore.xcodeproj */,
+				843749A015AE06F700157F9C /* QuartzCore.framework */,
+				8437495915AD11F400157F9C /* Mail */,
+				8437495215AD11F400157F9C /* Frameworks */,
+				8437495015AD11F400157F9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8437495015AD11F400157F9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8437494F15AD11F400157F9C /* .Mail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8437495215AD11F400157F9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				843749CB15AE51A600157F9C /* MailCore.framework */,
+				8437495315AD11F400157F9C /* Cocoa.framework */,
+				8437495515AD11F400157F9C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8437495515AD11F400157F9C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8437495615AD11F400157F9C /* AppKit.framework */,
+				8437495715AD11F400157F9C /* CoreData.framework */,
+				8437495815AD11F400157F9C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8437495915AD11F400157F9C /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				8437496515AD11F400157F9C /* CFIAppDelegate.h */,
+				8437496615AD11F400157F9C /* CFIAppDelegate.m */,
+				843749B315AE4B2B00157F9C /* CFIMailBodyPane.h */,
+				843749B415AE4B2C00157F9C /* CFIMailBodyPane.m */,
+				8437497B15AD1D0D00157F9C /* CFISplitView.h */,
+				8437497C15AD1D0D00157F9C /* CFISplitView.m */,
+				8437497E15AD1FF100157F9C /* CFIMenuView.h */,
+				8437497F15AD1FF100157F9C /* CFIMenuView.m */,
+				8499DD4615B11E0E006A4B61 /* CFIImageView.h */,
+				8499DD4715B11E0F006A4B61 /* CFIImageView.m */,
+				8499DD3915B1049F006A4B61 /* NSViewAnimation */,
+				84374A5615AF507900157F9C /* Compose Window */,
+				84D8AFDD15B0A744006E58E2 /* LIFlipEffect */,
+				84D8AFC815AF950C006E58E2 /* MKColorWell */,
+				84374A4C15AE5BAA00157F9C /* INAppStoreWindow */,
+				8437499615AE052700157F9C /* JAListView */,
+				8437495A15AD11F400157F9C /* Supporting Files */,
+			);
+			path = Mail;
+			sourceTree = "<group>";
+		};
+		8437495A15AD11F400157F9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8437496815AD11F400157F9C /* MainMenu.xib */,
+				8499DD3315B0FB84006A4B61 /* mail10-1.png */,
+				843749A815AE3F0000157F9C /* ToolbarCompose.png */,
+				8499DD2F15B0F956006A4B61 /* ToolbarAttachment.png */,
+				843749A215AE0BAA00157F9C /* ActionStepOneHover.png */,
+				84374A4A15AE5B2C00157F9C /* ActionStepOne.png */,
+				843749A415AE0C4200157F9C /* ActionStepTwo.png */,
+				843749A515AE0C4200157F9C /* ActionStepThree.png */,
+				84374A5215AE66EB00157F9C /* ActionStepThreeHover.png */,
+				84374A5315AE66EC00157F9C /* ActionStepTwoHover.png */,
+				8437495B15AD11F400157F9C /* Mail-Info.plist */,
+				8437495C15AD11F400157F9C /* InfoPlist.strings */,
+				8437495F15AD11F400157F9C /* main.m */,
+				8437496115AD11F400157F9C /* Mail-Prefix.pch */,
+				8437496215AD11F400157F9C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8437499615AE052700157F9C /* JAListView */ = {
+			isa = PBXGroup;
+			children = (
+				8437499D15AE06CC00157F9C /* JAObjectListViewItem.h */,
+				8437499E15AE06CC00157F9C /* JAObjectListViewItem.m */,
+				8437499815AE05E400157F9C /* DemoView.h */,
+				8437499915AE05E400157F9C /* DemoView.m */,
+				8437499A15AE05E400157F9C /* DemoView.xib */,
+				84374A4F15AE5E5700157F9C /* DKHoverButtonCell.h */,
+				84374A5015AE5E5700157F9C /* DKHoverButtonCell.m */,
+				8437498615AE051E00157F9C /* JAListView.h */,
+				8437498715AE051E00157F9C /* JAListView.m */,
+				8437498815AE051E00157F9C /* JAEdgeInsets.h */,
+				8437498915AE051E00157F9C /* JASectionedListView.h */,
+				8437498A15AE051F00157F9C /* JASectionedListView.m */,
+				8437498B15AE051F00157F9C /* JAObjectListView.h */,
+				8437498C15AE052000157F9C /* JAObjectListView.m */,
+				8437498D15AE052000157F9C /* JAListViewItem.h */,
+				8437498E15AE052100157F9C /* JAListViewItem.m */,
+				8437498F15AE052100157F9C /* NSIndexPath+JAListViewExtensions.h */,
+				8437499015AE052100157F9C /* NSIndexPath+JAListViewExtensions.m */,
+			);
+			name = JAListView;
+			sourceTree = "<group>";
+		};
+		843749F015AE532E00157F9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84374A0715AE532F00157F9C /* MailCore.framework */,
+				84374A0915AE532F00157F9C /* libmailcore.a */,
+				84374A0B15AE532F00157F9C /* Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84374A4C15AE5BAA00157F9C /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				8437497015AD16A800157F9C /* INAppStoreWindow.h */,
+				8437497115AD16A800157F9C /* INAppStoreWindow.m */,
+			);
+			name = INAppStoreWindow;
+			sourceTree = "<group>";
+		};
+		84374A5615AF507900157F9C /* Compose Window */ = {
+			isa = PBXGroup;
+			children = (
+				843749AC15AE451100157F9C /* CFIComposeWindow.h */,
+				843749AD15AE451200157F9C /* CFIComposeWindow.m */,
+				843749AE15AE451300157F9C /* CFIComposeWindow.xib */,
+				84D8AFD015AFAE6A006E58E2 /* CFIComposeView.h */,
+				84D8AFD115AFAE6A006E58E2 /* CFIComposeView.m */,
+				84D8AFDE15B0A824006E58E2 /* CFIMailIconWindow.h */,
+				84D8AFDF15B0A824006E58E2 /* CFIMailIconWindow.m */,
+				84D8AFCF15AFABEE006E58E2 /* Menu Bar */,
+				84374A5E15AF55F200157F9C /* CFIFormFields.h */,
+				84374A5F15AF55F200157F9C /* CFIFormFields.m */,
+				84374A6115AF5B1200157F9C /* CFIBackgroundField.h */,
+				84374A6215AF5B1200157F9C /* CFIBackgroundField.m */,
+				84374A5715AF509300157F9C /* CFIToolbar.h */,
+				84374A5815AF509300157F9C /* CFIToolbar.m */,
+			);
+			name = "Compose Window";
+			sourceTree = "<group>";
+		};
+		8499DD3915B1049F006A4B61 /* NSViewAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				8499DD3A15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.h */,
+				8499DD3B15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m */,
+			);
+			name = NSViewAnimation;
+			sourceTree = "<group>";
+		};
+		84D8AFC815AF950C006E58E2 /* MKColorWell */ = {
+			isa = PBXGroup;
+			children = (
+				84D8AFB915AF9508006E58E2 /* MKColorWell+Bindings.h */,
+				84D8AFBA15AF9508006E58E2 /* MKColorWell+Bindings.m */,
+				84D8AFBB15AF9508006E58E2 /* MKColorPickerView.h */,
+				84D8AFBC15AF9508006E58E2 /* MKColorPickerView.m */,
+				84D8AFBD15AF9508006E58E2 /* MKColorSwatchCell.h */,
+				84D8AFBE15AF9508006E58E2 /* MKColorSwatchCell.m */,
+				84D8AFBF15AF9508006E58E2 /* MKColorSwatchMatrix.h */,
+				84D8AFC015AF9508006E58E2 /* MKColorSwatchMatrix.m */,
+				84D8AFC115AF9508006E58E2 /* MKColorWell.h */,
+				84D8AFC215AF9508006E58E2 /* MKColorWell.m */,
+			);
+			name = MKColorWell;
+			sourceTree = "<group>";
+		};
+		84D8AFCF15AFABEE006E58E2 /* Menu Bar */ = {
+			isa = PBXGroup;
+			children = (
+				8499DD1015B0CC66006A4B61 /* SendBtn.png */,
+				8499DD1615B0D2D2006A4B61 /* SaveBtn.png */,
+				8499DD1215B0CEEF006A4B61 /* AttachSelected.png */,
+				8499DD1D15B0E93C006A4B61 /* ParagraphCenter.png */,
+				8499DD1E15B0E93C006A4B61 /* ParagraphLeft.png */,
+				8499DD1F15B0E93C006A4B61 /* ParagraphRight.png */,
+				8499DD2315B0EAEA006A4B61 /* ParagraphLeftSelected.png */,
+				8499DD2415B0EAEA006A4B61 /* ParagraphCenterSelected.png */,
+				8499DD2515B0EAEA006A4B61 /* ParagraphRightSelected.png */,
+				84D8AFC915AF9F01006E58E2 /* CFIMenuField.h */,
+				84D8AFCA15AF9F01006E58E2 /* CFIMenuField.m */,
+				84D8AFCC15AFA9A0006E58E2 /* CFIPopUpButton.h */,
+				84D8AFCD15AFA9A0006E58E2 /* CFIPopUpButton.m */,
+				8499DD1A15B0E0BF006A4B61 /* CFIFontMenu.h */,
+				8499DD1B15B0E0BF006A4B61 /* CFIFontMenu.m */,
+			);
+			name = "Menu Bar";
+			sourceTree = "<group>";
+		};
+		84D8AFDD15B0A744006E58E2 /* LIFlipEffect */ = {
+			isa = PBXGroup;
+			children = (
+				84D8AFD715B0A73B006E58E2 /* LIEffect.h */,
+				84D8AFD815B0A73B006E58E2 /* LIEffect.m */,
+				84D8AFD915B0A73B006E58E2 /* LIFlipEffect.h */,
+				84D8AFDA15B0A73B006E58E2 /* LIFlipEffect.m */,
+			);
+			name = LIFlipEffect;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8437494E15AD11F400157F9C /* Mail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8437496D15AD11F400157F9C /* Build configuration list for PBXNativeTarget "Mail" */;
+			buildPhases = (
+				8437494B15AD11F400157F9C /* Sources */,
+				8437494C15AD11F400157F9C /* Frameworks */,
+				8437494D15AD11F400157F9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mail;
+			productName = Mail;
+			productReference = 8437494F15AD11F400157F9C /* .Mail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8437494615AD11F300157F9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CFI;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "CodaFi Inc.";
+			};
+			buildConfigurationList = 8437494915AD11F300157F9C /* Build configuration list for PBXProject "Mail" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8437494415AD11F300157F9C;
+			productRefGroup = 8437495015AD11F400157F9C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 843749F015AE532E00157F9C /* Products */;
+					ProjectRef = 843749EF15AE532E00157F9C /* MailCore.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8437494E15AD11F400157F9C /* Mail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		84374A0715AE532F00157F9C /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = 84374A0615AE532F00157F9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84374A0915AE532F00157F9C /* libmailcore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmailcore.a;
+			remoteRef = 84374A0815AE532F00157F9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84374A0B15AE532F00157F9C /* Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.octest;
+			remoteRef = 84374A0A15AE532F00157F9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8437494D15AD11F400157F9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8437495E15AD11F400157F9C /* InfoPlist.strings in Resources */,
+				8437496415AD11F400157F9C /* Credits.rtf in Resources */,
+				8437496A15AD11F400157F9C /* MainMenu.xib in Resources */,
+				8437499C15AE05E400157F9C /* DemoView.xib in Resources */,
+				843749A315AE0BAA00157F9C /* ActionStepOneHover.png in Resources */,
+				843749A615AE0C4200157F9C /* ActionStepTwo.png in Resources */,
+				843749A715AE0C4200157F9C /* ActionStepThree.png in Resources */,
+				843749A915AE3F0000157F9C /* ToolbarCompose.png in Resources */,
+				843749B015AE451400157F9C /* CFIComposeWindow.xib in Resources */,
+				84374A4B15AE5B2C00157F9C /* ActionStepOne.png in Resources */,
+				84374A5415AE66EC00157F9C /* ActionStepThreeHover.png in Resources */,
+				84374A5515AE66EC00157F9C /* ActionStepTwoHover.png in Resources */,
+				8499DD1115B0CC66006A4B61 /* SendBtn.png in Resources */,
+				8499DD1315B0CEEF006A4B61 /* AttachSelected.png in Resources */,
+				8499DD1715B0D2D2006A4B61 /* SaveBtn.png in Resources */,
+				8499DD1915B0DACD006A4B61 /* MailIcns.icns in Resources */,
+				8499DD2015B0E93C006A4B61 /* ParagraphCenter.png in Resources */,
+				8499DD2115B0E93C006A4B61 /* ParagraphLeft.png in Resources */,
+				8499DD2215B0E93C006A4B61 /* ParagraphRight.png in Resources */,
+				8499DD2615B0EAEA006A4B61 /* ParagraphLeftSelected.png in Resources */,
+				8499DD2715B0EAEA006A4B61 /* ParagraphCenterSelected.png in Resources */,
+				8499DD2815B0EAEA006A4B61 /* ParagraphRightSelected.png in Resources */,
+				8499DD3015B0F956006A4B61 /* ToolbarAttachment.png in Resources */,
+				8499DD3415B0FB84006A4B61 /* mail10-1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8437494B15AD11F400157F9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8437496015AD11F400157F9C /* main.m in Sources */,
+				8437496715AD11F400157F9C /* CFIAppDelegate.m in Sources */,
+				8437497215AD16A800157F9C /* INAppStoreWindow.m in Sources */,
+				8437497D15AD1D0D00157F9C /* CFISplitView.m in Sources */,
+				8437498015AD1FF100157F9C /* CFIMenuView.m in Sources */,
+				8437499115AE052100157F9C /* JAListView.m in Sources */,
+				8437499215AE052100157F9C /* JASectionedListView.m in Sources */,
+				8437499315AE052100157F9C /* JAObjectListView.m in Sources */,
+				8437499415AE052100157F9C /* JAListViewItem.m in Sources */,
+				8437499515AE052100157F9C /* NSIndexPath+JAListViewExtensions.m in Sources */,
+				8437499B15AE05E400157F9C /* DemoView.m in Sources */,
+				8437499F15AE06CD00157F9C /* JAObjectListViewItem.m in Sources */,
+				843749AF15AE451400157F9C /* CFIComposeWindow.m in Sources */,
+				843749B515AE4B2D00157F9C /* CFIMailBodyPane.m in Sources */,
+				84374A5115AE5E5800157F9C /* DKHoverButtonCell.m in Sources */,
+				84374A5915AF509300157F9C /* CFIToolbar.m in Sources */,
+				84374A6015AF55F200157F9C /* CFIFormFields.m in Sources */,
+				84374A6315AF5B1200157F9C /* CFIBackgroundField.m in Sources */,
+				84D8AFC315AF9508006E58E2 /* MKColorWell+Bindings.m in Sources */,
+				84D8AFC415AF9508006E58E2 /* MKColorPickerView.m in Sources */,
+				84D8AFC515AF9508006E58E2 /* MKColorSwatchCell.m in Sources */,
+				84D8AFC615AF9508006E58E2 /* MKColorSwatchMatrix.m in Sources */,
+				84D8AFC715AF9508006E58E2 /* MKColorWell.m in Sources */,
+				84D8AFCB15AF9F01006E58E2 /* CFIMenuField.m in Sources */,
+				84D8AFCE15AFA9A0006E58E2 /* CFIPopUpButton.m in Sources */,
+				84D8AFD215AFAE6A006E58E2 /* CFIComposeView.m in Sources */,
+				84D8AFDB15B0A73C006E58E2 /* LIEffect.m in Sources */,
+				84D8AFDC15B0A73C006E58E2 /* LIFlipEffect.m in Sources */,
+				84D8AFE015B0A824006E58E2 /* CFIMailIconWindow.m in Sources */,
+				8499DD1C15B0E0BF006A4B61 /* CFIFontMenu.m in Sources */,
+				8499DD3C15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m in Sources */,
+				8499DD4815B11E10006A4B61 /* CFIImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8437495C15AD11F400157F9C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8437495D15AD11F400157F9C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8437496215AD11F400157F9C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8437496315AD11F400157F9C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8437496815AD11F400157F9C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8437496915AD11F400157F9C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8437496B15AD11F400157F9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8437496C15AD11F400157F9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8437496E15AD11F400157F9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mail/Mail-Prefix.pch";
+				INFOPLIST_FILE = "Mail/Mail-Info.plist";
+				PRODUCT_NAME = .Mail;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8437496F15AD11F400157F9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mail/Mail-Prefix.pch";
+				INFOPLIST_FILE = "Mail/Mail-Info.plist";
+				PRODUCT_NAME = .Mail;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8437494915AD11F300157F9C /* Build configuration list for PBXProject "Mail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8437496B15AD11F400157F9C /* Debug */,
+				8437496C15AD11F400157F9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8437496D15AD11F400157F9C /* Build configuration list for PBXNativeTarget "Mail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8437496E15AD11F400157F9C /* Debug */,
+				8437496F15AD11F400157F9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8437494615AD11F300157F9C /* Project object */;
+}
