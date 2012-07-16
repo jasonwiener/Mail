@@ -14,7 +14,6 @@
 		8437496715AD11F400157F9C /* CFIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437496615AD11F400157F9C /* CFIAppDelegate.m */; };
 		8437496A15AD11F400157F9C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437496815AD11F400157F9C /* MainMenu.xib */; };
 		8437497215AD16A800157F9C /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437497115AD16A800157F9C /* INAppStoreWindow.m */; };
-		8437497D15AD1D0D00157F9C /* CFISplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437497C15AD1D0D00157F9C /* CFISplitView.m */; };
 		8437498015AD1FF100157F9C /* CFIMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437497F15AD1FF100157F9C /* CFIMenuView.m */; };
 		8437499115AE052100157F9C /* JAListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498715AE051E00157F9C /* JAListView.m */; };
 		8437499215AE052100157F9C /* JASectionedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498A15AE051F00157F9C /* JASectionedListView.m */; };
@@ -108,8 +107,6 @@
 		8437496915AD11F400157F9C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8437497015AD16A800157F9C /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
 		8437497115AD16A800157F9C /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
-		8437497B15AD1D0D00157F9C /* CFISplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFISplitView.h; sourceTree = "<group>"; };
-		8437497C15AD1D0D00157F9C /* CFISplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFISplitView.m; sourceTree = "<group>"; };
 		8437497E15AD1FF100157F9C /* CFIMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIMenuView.h; sourceTree = "<group>"; };
 		8437497F15AD1FF100157F9C /* CFIMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIMenuView.m; sourceTree = "<group>"; };
 		8437498615AE051E00157F9C /* JAListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAListView.h; sourceTree = "<group>"; };
@@ -254,8 +251,6 @@
 				8437496615AD11F400157F9C /* CFIAppDelegate.m */,
 				843749B315AE4B2B00157F9C /* CFIMailBodyPane.h */,
 				843749B415AE4B2C00157F9C /* CFIMailBodyPane.m */,
-				8437497B15AD1D0D00157F9C /* CFISplitView.h */,
-				8437497C15AD1D0D00157F9C /* CFISplitView.m */,
 				8437497E15AD1FF100157F9C /* CFIMenuView.h */,
 				8437497F15AD1FF100157F9C /* CFIMenuView.m */,
 				8499DD4615B11E0E006A4B61 /* CFIImageView.h */,
@@ -536,7 +531,6 @@
 				8437496015AD11F400157F9C /* main.m in Sources */,
 				8437496715AD11F400157F9C /* CFIAppDelegate.m in Sources */,
 				8437497215AD16A800157F9C /* INAppStoreWindow.m in Sources */,
-				8437497D15AD1D0D00157F9C /* CFISplitView.m in Sources */,
 				8437498015AD1FF100157F9C /* CFIMenuView.m in Sources */,
 				8437499115AE052100157F9C /* JAListView.m in Sources */,
 				8437499215AE052100157F9C /* JASectionedListView.m in Sources */,

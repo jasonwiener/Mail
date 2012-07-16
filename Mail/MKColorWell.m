@@ -87,6 +87,7 @@
 
 - (NSPopover *)createPopover
 {
+    
     NSPopover *aPopover = [[NSPopover alloc] init];
     [aPopover setBehavior:NSPopoverBehaviorSemitransient];
     [aPopover setAnimates:self.animatePopover];

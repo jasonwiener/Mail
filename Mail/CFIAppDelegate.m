@@ -11,6 +11,33 @@
 #import <QuartzCore/QuartzCore.h>
 #import "NSView+NSViewAnimationWithBlocks.h"
 
+
+@implementation NSWindow (FRBExtra)
+
+- (NSImage *)windowImage
+{
+    NSImage * image = [[NSImage alloc] initWithCGImage:[self windowImageShot] size:[self frame].size];
+    [image setDataRetained:YES];
+    [image setCacheMode:NSImageCacheNever];
+    return image;
+}
+
+
+- (CGImageRef)windowImageShot
+{
+    CGWindowID windowID = (CGWindowID)[self windowNumber];
+    CGWindowImageOption imageOptions = kCGWindowImageDefault;
+    CGWindowListOption singleWindowListOptions = kCGWindowListOptionIncludingWindow;
+    CGRect imageBounds = CGRectNull;
+    
+	CGImageRef windowImage = CGWindowListCreateImage(imageBounds, singleWindowListOptions, windowID, imageOptions);
+    
+    return windowImage;
+}
+
+
+@end
+
 @interface NSWindow (NSWindow_AccessoryView)
 
 -(void)addViewToTitleBar:(NSView*)viewToAdd atXPosition:(CGFloat)x;
@@ -53,6 +80,8 @@
     CGFloat xPos = NSWidth([[self.window screen] frame])/2 - NSWidth([self.window frame])/2;
     CGFloat yPos = NSHeight([[self.window screen] frame])/2 - NSHeight([self.window frame])/2;
     [self.window setFrame:NSMakeRect(xPos, yPos, NSWidth([self.window frame]), NSHeight([self.window frame])) display:YES];
+    
+    CGImageWriteToFile([self.window windowImageShot], @"/Users/admin/Desktop/Window.png");
 }
 
 #pragma mark JAListViewDelegate
@@ -128,6 +157,18 @@
 
 - (NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex {
     return NSZeroRect;
+}
+
+void CGImageWriteToFile(CGImageRef image, NSString *path) {
+    CFURLRef url = (__bridge_retained CFURLRef)[NSURL fileURLWithPath:path];
+    CGImageDestinationRef destination = CGImageDestinationCreateWithURL(url, kUTTypePNG, 1, NULL);
+    CGImageDestinationAddImage(destination, image, nil);
+    
+    if (!CGImageDestinationFinalize(destination)) {
+        NSLog(@"Failed to write image to %@", path);
+    }
+    
+    CFRelease(destination);
 }
 
 @end
