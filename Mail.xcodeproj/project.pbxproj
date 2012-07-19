@@ -20,8 +20,7 @@
 		8437499315AE052100157F9C /* JAObjectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498C15AE052000157F9C /* JAObjectListView.m */; };
 		8437499415AE052100157F9C /* JAListViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437498E15AE052100157F9C /* JAListViewItem.m */; };
 		8437499515AE052100157F9C /* NSIndexPath+JAListViewExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437499015AE052100157F9C /* NSIndexPath+JAListViewExtensions.m */; };
-		8437499B15AE05E400157F9C /* DemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437499915AE05E400157F9C /* DemoView.m */; };
-		8437499C15AE05E400157F9C /* DemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437499A15AE05E400157F9C /* DemoView.xib */; };
+		8437499C15AE05E400157F9C /* CFIInboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8437499A15AE05E400157F9C /* CFIInboxCell.xib */; };
 		8437499F15AE06CD00157F9C /* JAObjectListViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437499E15AE06CC00157F9C /* JAObjectListViewItem.m */; };
 		843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843749A015AE06F700157F9C /* QuartzCore.framework */; };
 		843749A315AE0BAA00157F9C /* ActionStepOneHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 843749A215AE0BAA00157F9C /* ActionStepOneHover.png */; };
@@ -39,6 +38,9 @@
 		84374A5915AF509300157F9C /* CFIToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A5815AF509300157F9C /* CFIToolbar.m */; };
 		84374A6015AF55F200157F9C /* CFIFormFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A5F15AF55F200157F9C /* CFIFormFields.m */; };
 		84374A6315AF5B1200157F9C /* CFIBackgroundField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84374A6215AF5B1200157F9C /* CFIBackgroundField.m */; };
+		84420B9C15B75A6600EC7869 /* JUCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420B9615B75A6600EC7869 /* JUCollectionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84420B9D15B75A6600EC7869 /* JUCollectionView+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420B9815B75A6600EC7869 /* JUCollectionView+Selection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84420B9E15B75A6600EC7869 /* JUCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420B9A15B75A6600EC7869 /* JUCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8499DD1115B0CC66006A4B61 /* SendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1015B0CC66006A4B61 /* SendBtn.png */; };
 		8499DD1315B0CEEF006A4B61 /* AttachSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1215B0CEEF006A4B61 /* AttachSelected.png */; };
 		8499DD1715B0D2D2006A4B61 /* SaveBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1615B0D2D2006A4B61 /* SaveBtn.png */; };
@@ -54,6 +56,9 @@
 		8499DD3415B0FB84006A4B61 /* mail10-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD3315B0FB84006A4B61 /* mail10-1.png */; };
 		8499DD3C15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD3B15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8499DD4815B11E10006A4B61 /* CFIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD4715B11E0F006A4B61 /* CFIImageView.m */; };
+		8499DD5515B498A5006A4B61 /* CFIComposeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD5415B498A5006A4B61 /* CFIComposeTextView.m */; };
+		8499DD5B15B4F273006A4B61 /* CFIInboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8499DD5A15B4F272006A4B61 /* CFIInboxCell.m */; };
+		8499DD8915B4F9C9006A4B61 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8499DD8815B4F9C8006A4B61 /* Quartz.framework */; };
 		84D8AFC315AF9508006E58E2 /* MKColorWell+Bindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFBA15AF9508006E58E2 /* MKColorWell+Bindings.m */; };
 		84D8AFC415AF9508006E58E2 /* MKColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFBC15AF9508006E58E2 /* MKColorPickerView.m */; };
 		84D8AFC515AF9508006E58E2 /* MKColorSwatchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8AFBE15AF9508006E58E2 /* MKColorSwatchCell.m */; };
@@ -120,9 +125,7 @@
 		8437498E15AE052100157F9C /* JAListViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAListViewItem.m; sourceTree = "<group>"; };
 		8437498F15AE052100157F9C /* NSIndexPath+JAListViewExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JAListViewExtensions.h"; sourceTree = "<group>"; };
 		8437499015AE052100157F9C /* NSIndexPath+JAListViewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+JAListViewExtensions.m"; sourceTree = "<group>"; };
-		8437499815AE05E400157F9C /* DemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoView.h; sourceTree = "<group>"; };
-		8437499915AE05E400157F9C /* DemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoView.m; sourceTree = "<group>"; };
-		8437499A15AE05E400157F9C /* DemoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoView.xib; sourceTree = "<group>"; };
+		8437499A15AE05E400157F9C /* CFIInboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIInboxCell.xib; sourceTree = "<group>"; };
 		8437499D15AE06CC00157F9C /* JAObjectListViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAObjectListViewItem.h; sourceTree = "<group>"; };
 		8437499E15AE06CC00157F9C /* JAObjectListViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAObjectListViewItem.m; sourceTree = "<group>"; };
 		843749A015AE06F700157F9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -148,6 +151,13 @@
 		84374A5F15AF55F200157F9C /* CFIFormFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIFormFields.m; sourceTree = "<group>"; };
 		84374A6115AF5B1200157F9C /* CFIBackgroundField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIBackgroundField.h; sourceTree = "<group>"; };
 		84374A6215AF5B1200157F9C /* CFIBackgroundField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIBackgroundField.m; sourceTree = "<group>"; };
+		84420B9515B75A6600EC7869 /* JUCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUCollectionView.h; sourceTree = "<group>"; };
+		84420B9615B75A6600EC7869 /* JUCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUCollectionView.m; sourceTree = "<group>"; };
+		84420B9715B75A6600EC7869 /* JUCollectionView+Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUCollectionView+Selection.h"; sourceTree = "<group>"; };
+		84420B9815B75A6600EC7869 /* JUCollectionView+Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUCollectionView+Selection.m"; sourceTree = "<group>"; };
+		84420B9915B75A6600EC7869 /* JUCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUCollectionViewCell.h; sourceTree = "<group>"; };
+		84420B9A15B75A6600EC7869 /* JUCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUCollectionViewCell.m; sourceTree = "<group>"; };
+		84420B9B15B75A6600EC7869 /* JUCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUCollectionViewDelegate.h; sourceTree = "<group>"; };
 		8499DD1015B0CC66006A4B61 /* SendBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SendBtn.png; sourceTree = "<group>"; };
 		8499DD1215B0CEEF006A4B61 /* AttachSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AttachSelected.png; sourceTree = "<group>"; };
 		8499DD1615B0D2D2006A4B61 /* SaveBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SaveBtn.png; sourceTree = "<group>"; };
@@ -166,6 +176,11 @@
 		8499DD3B15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+NSViewAnimationWithBlocks.m"; sourceTree = "<group>"; };
 		8499DD4615B11E0E006A4B61 /* CFIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIImageView.h; sourceTree = "<group>"; };
 		8499DD4715B11E0F006A4B61 /* CFIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIImageView.m; sourceTree = "<group>"; };
+		8499DD5315B498A4006A4B61 /* CFIComposeTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIComposeTextView.h; sourceTree = "<group>"; };
+		8499DD5415B498A5006A4B61 /* CFIComposeTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIComposeTextView.m; sourceTree = "<group>"; };
+		8499DD5915B4F272006A4B61 /* CFIInboxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIInboxCell.h; sourceTree = "<group>"; };
+		8499DD5A15B4F272006A4B61 /* CFIInboxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIInboxCell.m; sourceTree = "<group>"; };
+		8499DD8815B4F9C8006A4B61 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		84D8AFB915AF9508006E58E2 /* MKColorWell+Bindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKColorWell+Bindings.h"; sourceTree = "<group>"; };
 		84D8AFBA15AF9508006E58E2 /* MKColorWell+Bindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKColorWell+Bindings.m"; sourceTree = "<group>"; };
 		84D8AFBB15AF9508006E58E2 /* MKColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKColorPickerView.h; sourceTree = "<group>"; };
@@ -195,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8499DD8915B4F9C9006A4B61 /* Quartz.framework in Frameworks */,
 				84374A1015AE533D00157F9C /* MailCore.framework in Frameworks */,
 				843749A115AE06F800157F9C /* QuartzCore.framework in Frameworks */,
 				8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */,
@@ -207,6 +223,7 @@
 		8437494415AD11F300157F9C = {
 			isa = PBXGroup;
 			children = (
+				8499DD8815B4F9C8006A4B61 /* Quartz.framework */,
 				8499DD1815B0DACD006A4B61 /* MailIcns.icns */,
 				843749EF15AE532E00157F9C /* MailCore.xcodeproj */,
 				843749A015AE06F700157F9C /* QuartzCore.framework */,
@@ -247,6 +264,7 @@
 		8437495915AD11F400157F9C /* Mail */ = {
 			isa = PBXGroup;
 			children = (
+				8437496815AD11F400157F9C /* MainMenu.xib */,
 				8437496515AD11F400157F9C /* CFIAppDelegate.h */,
 				8437496615AD11F400157F9C /* CFIAppDelegate.m */,
 				843749B315AE4B2B00157F9C /* CFIMailBodyPane.h */,
@@ -255,6 +273,7 @@
 				8437497F15AD1FF100157F9C /* CFIMenuView.m */,
 				8499DD4615B11E0E006A4B61 /* CFIImageView.h */,
 				8499DD4715B11E0F006A4B61 /* CFIImageView.m */,
+				8499DD8715B4F71D006A4B61 /* JUICollectionView */,
 				8499DD3915B1049F006A4B61 /* NSViewAnimation */,
 				84374A5615AF507900157F9C /* Compose Window */,
 				84D8AFDD15B0A744006E58E2 /* LIFlipEffect */,
@@ -269,7 +288,6 @@
 		8437495A15AD11F400157F9C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8437496815AD11F400157F9C /* MainMenu.xib */,
 				8499DD3315B0FB84006A4B61 /* mail10-1.png */,
 				843749A815AE3F0000157F9C /* ToolbarCompose.png */,
 				8499DD2F15B0F956006A4B61 /* ToolbarAttachment.png */,
@@ -293,9 +311,9 @@
 			children = (
 				8437499D15AE06CC00157F9C /* JAObjectListViewItem.h */,
 				8437499E15AE06CC00157F9C /* JAObjectListViewItem.m */,
-				8437499815AE05E400157F9C /* DemoView.h */,
-				8437499915AE05E400157F9C /* DemoView.m */,
-				8437499A15AE05E400157F9C /* DemoView.xib */,
+				8499DD5915B4F272006A4B61 /* CFIInboxCell.h */,
+				8499DD5A15B4F272006A4B61 /* CFIInboxCell.m */,
+				8437499A15AE05E400157F9C /* CFIInboxCell.xib */,
 				84374A4F15AE5E5700157F9C /* DKHoverButtonCell.h */,
 				84374A5015AE5E5700157F9C /* DKHoverButtonCell.m */,
 				8437498615AE051E00157F9C /* JAListView.h */,
@@ -342,6 +360,8 @@
 				84D8AFD115AFAE6A006E58E2 /* CFIComposeView.m */,
 				84D8AFDE15B0A824006E58E2 /* CFIMailIconWindow.h */,
 				84D8AFDF15B0A824006E58E2 /* CFIMailIconWindow.m */,
+				8499DD5315B498A4006A4B61 /* CFIComposeTextView.h */,
+				8499DD5415B498A5006A4B61 /* CFIComposeTextView.m */,
 				84D8AFCF15AFABEE006E58E2 /* Menu Bar */,
 				84374A5E15AF55F200157F9C /* CFIFormFields.h */,
 				84374A5F15AF55F200157F9C /* CFIFormFields.m */,
@@ -360,6 +380,20 @@
 				8499DD3B15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m */,
 			);
 			name = NSViewAnimation;
+			sourceTree = "<group>";
+		};
+		8499DD8715B4F71D006A4B61 /* JUICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				84420B9515B75A6600EC7869 /* JUCollectionView.h */,
+				84420B9615B75A6600EC7869 /* JUCollectionView.m */,
+				84420B9715B75A6600EC7869 /* JUCollectionView+Selection.h */,
+				84420B9815B75A6600EC7869 /* JUCollectionView+Selection.m */,
+				84420B9915B75A6600EC7869 /* JUCollectionViewCell.h */,
+				84420B9A15B75A6600EC7869 /* JUCollectionViewCell.m */,
+				84420B9B15B75A6600EC7869 /* JUCollectionViewDelegate.h */,
+			);
+			name = JUICollectionView;
 			sourceTree = "<group>";
 		};
 		84D8AFC815AF950C006E58E2 /* MKColorWell */ = {
@@ -497,7 +531,7 @@
 				8437495E15AD11F400157F9C /* InfoPlist.strings in Resources */,
 				8437496415AD11F400157F9C /* Credits.rtf in Resources */,
 				8437496A15AD11F400157F9C /* MainMenu.xib in Resources */,
-				8437499C15AE05E400157F9C /* DemoView.xib in Resources */,
+				8437499C15AE05E400157F9C /* CFIInboxCell.xib in Resources */,
 				843749A315AE0BAA00157F9C /* ActionStepOneHover.png in Resources */,
 				843749A615AE0C4200157F9C /* ActionStepTwo.png in Resources */,
 				843749A715AE0C4200157F9C /* ActionStepThree.png in Resources */,
@@ -537,7 +571,6 @@
 				8437499315AE052100157F9C /* JAObjectListView.m in Sources */,
 				8437499415AE052100157F9C /* JAListViewItem.m in Sources */,
 				8437499515AE052100157F9C /* NSIndexPath+JAListViewExtensions.m in Sources */,
-				8437499B15AE05E400157F9C /* DemoView.m in Sources */,
 				8437499F15AE06CD00157F9C /* JAObjectListViewItem.m in Sources */,
 				843749AF15AE451400157F9C /* CFIComposeWindow.m in Sources */,
 				843749B515AE4B2D00157F9C /* CFIMailBodyPane.m in Sources */,
@@ -559,6 +592,11 @@
 				8499DD1C15B0E0BF006A4B61 /* CFIFontMenu.m in Sources */,
 				8499DD3C15B104C8006A4B61 /* NSView+NSViewAnimationWithBlocks.m in Sources */,
 				8499DD4815B11E10006A4B61 /* CFIImageView.m in Sources */,
+				8499DD5515B498A5006A4B61 /* CFIComposeTextView.m in Sources */,
+				8499DD5B15B4F273006A4B61 /* CFIInboxCell.m in Sources */,
+				84420B9C15B75A6600EC7869 /* JUCollectionView.m in Sources */,
+				84420B9D15B75A6600EC7869 /* JUCollectionView+Selection.m in Sources */,
+				84420B9E15B75A6600EC7869 /* JUCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

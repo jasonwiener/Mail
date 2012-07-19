@@ -10,33 +10,7 @@
 #import "INAppStoreWindow.h"
 #import <QuartzCore/QuartzCore.h>
 #import "NSView+NSViewAnimationWithBlocks.h"
-
-
-@implementation NSWindow (FRBExtra)
-
-- (NSImage *)windowImage
-{
-    NSImage * image = [[NSImage alloc] initWithCGImage:[self windowImageShot] size:[self frame].size];
-    [image setDataRetained:YES];
-    [image setCacheMode:NSImageCacheNever];
-    return image;
-}
-
-
-- (CGImageRef)windowImageShot
-{
-    CGWindowID windowID = (CGWindowID)[self windowNumber];
-    CGWindowImageOption imageOptions = kCGWindowImageDefault;
-    CGWindowListOption singleWindowListOptions = kCGWindowListOptionIncludingWindow;
-    CGRect imageBounds = CGRectNull;
-    
-	CGImageRef windowImage = CGWindowListCreateImage(imageBounds, singleWindowListOptions, windowID, imageOptions);
-    
-    return windowImage;
-}
-
-
-@end
+#import "CFIMenuView.h"
 
 @interface NSWindow (NSWindow_AccessoryView)
 
@@ -81,14 +55,37 @@
     CGFloat yPos = NSHeight([[self.window screen] frame])/2 - NSHeight([self.window frame])/2;
     [self.window setFrame:NSMakeRect(xPos, yPos, NSWidth([self.window frame]), NSHeight([self.window frame])) display:YES];
     
-    CGImageWriteToFile([self.window windowImageShot], @"/Users/admin/Desktop/Window.png");
+    [[accountButton cell] setBackgroundColor:[NSColor colorWithCalibratedRed:51.0f/255.0f green:52.0f/255.0f blue:56.0f/255.0f alpha:1.0f]];
+    
 }
+
+- (NSUInteger)numberOfCellsInCollectionView:(JUCollectionView *)view
+{
+    return 10;
+}
+
+- (JUCollectionViewCell *)collectionView:(JUCollectionView *)view cellForIndex:(NSUInteger)index
+{
+    JUCollectionViewCell *cell = [view dequeueReusableCellWithIdentifier:@"cell"];
+    
+    if(!cell)
+        cell = [[JUCollectionViewCell alloc] initWithReuseIdentifier:@"cell"];
+
+    return cell;
+}
+
+- (void)collectionView:(JUCollectionView *)_collectionView didSelectCellAtIndex:(NSUInteger)index
+{
+    NSLog(@"Selected cell at index: %u", (unsigned int)index);
+    NSLog(@"Position: %@", NSStringFromPoint([_collectionView positionOfCellAtIndex:index]));
+}
+
 
 #pragma mark JAListViewDelegate
 
 - (void)listView:(JAListView *)list willSelectView:(JAListViewItem *)view {
     if(list == self.listView) {
-        DemoView *demoView = (DemoView *) view;
+        CFIInboxCell *demoView = (CFIInboxCell *) view;
         demoView.selected = YES;
     }
 }
@@ -100,7 +97,7 @@
             self.origRect = view.frame;
             [self listView:self.listView didUnSelectView:self.prevView];
         }
-        self.prevView = (DemoView*)view;
+        self.prevView = (CFIInboxCell*)view;
         if (NSMinX(self.origRect) == NSMinX(view.frame))
             [[view animator]setFrame:NSMakeRect(NSMinX(view.frame)+42, NSMinY(view.frame), NSWidth(view.frame), NSHeight(view.frame))];
     }
@@ -108,7 +105,7 @@
 
 - (void)listView:(JAListView *)list didUnSelectView:(JAListViewItem *)view {
     if(list == self.listView) {
-        DemoView *demoView = (DemoView *) view;
+        CFIInboxCell *demoView = (CFIInboxCell *) view;
         [[view animator]setFrame:NSMakeRect(NSMinX(self.origRect), NSMinY(view.frame), NSWidth(view.frame), NSHeight(view.frame))];
         demoView.selected = NO;
     }
@@ -122,8 +119,7 @@
 }
 
 - (JAListViewItem *)listView:(JAListView *)listView viewAtIndex:(NSUInteger)index {
-    DemoView *view = [DemoView demoView];
-    view.text = [NSString stringWithFormat:@"Row %lu", index + 1];
+    CFIInboxCell *view = [CFIInboxCell demoView];
     return view;
 }
 
@@ -140,35 +136,20 @@
     [self.composeWindow orderOut: self];
 }
 
+
 -(void)moveToAttachments:(id)sender {
-    [NSView animateWithDuration:5.00 delay:1.0 options:NSViewAnimationOptionCurveEaseIn animations:^{
-        [self.listView setFrame:NSMakeRect(0, 0, 320, 460)];
-    }completion:^(BOOL finished){
-        
-    }];
+    [self.window.contentView replaceSubview:[[self.window.contentView subviews] objectAtIndex:1]
+                               with:[[self.window.contentView subviews] objectAtIndex:0]];
+
 }
+
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
     [[NSApplication sharedApplication]activateIgnoringOtherApps:YES];
-}
-
-- (NSRect)splitView:(NSSplitView *)splitView effectiveRect:(NSRect)proposedEffectiveRect forDrawnRect:(NSRect)drawnRect ofDividerAtIndex:(NSInteger)dividerIndex {
-    return NSZeroRect;
-}
-
-void CGImageWriteToFile(CGImageRef image, NSString *path) {
-    CFURLRef url = (__bridge_retained CFURLRef)[NSURL fileURLWithPath:path];
-    CGImageDestinationRef destination = CGImageDestinationCreateWithURL(url, kUTTypePNG, 1, NULL);
-    CGImageDestinationAddImage(destination, image, nil);
     
-    if (!CGImageDestinationFinalize(destination)) {
-        NSLog(@"Failed to write image to %@", path);
-    }
-    
-    CFRelease(destination);
 }
 
 @end

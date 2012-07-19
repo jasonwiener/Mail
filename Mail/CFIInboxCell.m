@@ -6,18 +6,18 @@
 //  Copyright 2010 Maybe Apps. All rights reserved.
 //
 
-#import "DemoView.h"
+#import "CFIInboxCell.h"
 
-@interface DemoView ()
+@interface CFIInboxCell ()
 - (void)drawBackground;
 
 @property (weak, nonatomic, readonly) NSGradient *gradient;
 @end
 
 
-@implementation DemoView
+@implementation CFIInboxCell
 
-+ (DemoView *)demoView {
++ (CFIInboxCell *)demoView {
     static NSNib *nib = nil;
     if(nib == nil) {
         nib = [[NSNib alloc] initWithNibNamed:NSStringFromClass(self) bundle:nil];
@@ -34,6 +34,8 @@
     NSAssert1(NO, @"No view of class %@ found.", NSStringFromClass(self));
     return nil;
 }
+
+
 
 -(void)awakeFromNib {
     [(DKHoverButtonCell*)self.actionStep1 setImage:[NSImage imageNamed:@"ActionStepOne.png"]];
@@ -75,12 +77,12 @@
 }
 - (void)setText:(NSString *)newText {
     NSString *newValue = [newText copy];
-    [self.textField setStringValue:newValue];
-    [self.shadowTextField setStringValue:newValue];
+    [self.subject setStringValue:newValue];
+    [self.bodyPreview setStringValue:newValue];
 }
 
 - (NSString *)text {
-    return [self.textField stringValue];
+    return [self.subject stringValue];
 }
 
 - (void)setSelected:(BOOL)isSelected {
@@ -89,7 +91,7 @@
 }
 
 @synthesize selected;
-@synthesize textField;
-@synthesize shadowTextField;
+@synthesize subject;
+@synthesize bodyPreview;
 
 @end
