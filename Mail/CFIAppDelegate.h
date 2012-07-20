@@ -22,7 +22,7 @@
     //Inbox, Attachments
     IBOutlet NSView *inboxView;
     IBOutlet JUCollectionView *assetCollectionView;  // the container view in which the slides are positioned
-    
+    NSMutableArray *content;
 }
 
 @property (strong) IBOutlet NSWindow *window;

@@ -41,6 +41,8 @@
 		84420B9C15B75A6600EC7869 /* JUCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420B9615B75A6600EC7869 /* JUCollectionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84420B9D15B75A6600EC7869 /* JUCollectionView+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420B9815B75A6600EC7869 /* JUCollectionView+Selection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84420B9E15B75A6600EC7869 /* JUCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420B9A15B75A6600EC7869 /* JUCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84420BBF15B8CA2800EC7869 /* CFIAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84420BBE15B8CA2800EC7869 /* CFIAttachmentCell.m */; };
+		84420BC115B8CA7C00EC7869 /* CFIAttachmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84420BC015B8CA7C00EC7869 /* CFIAttachmentCell.xib */; };
 		8499DD1115B0CC66006A4B61 /* SendBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1015B0CC66006A4B61 /* SendBtn.png */; };
 		8499DD1315B0CEEF006A4B61 /* AttachSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1215B0CEEF006A4B61 /* AttachSelected.png */; };
 		8499DD1715B0D2D2006A4B61 /* SaveBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8499DD1615B0D2D2006A4B61 /* SaveBtn.png */; };
@@ -158,6 +160,9 @@
 		84420B9915B75A6600EC7869 /* JUCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUCollectionViewCell.h; sourceTree = "<group>"; };
 		84420B9A15B75A6600EC7869 /* JUCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUCollectionViewCell.m; sourceTree = "<group>"; };
 		84420B9B15B75A6600EC7869 /* JUCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUCollectionViewDelegate.h; sourceTree = "<group>"; };
+		84420BBD15B8CA2800EC7869 /* CFIAttachmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIAttachmentCell.h; sourceTree = "<group>"; };
+		84420BBE15B8CA2800EC7869 /* CFIAttachmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIAttachmentCell.m; sourceTree = "<group>"; };
+		84420BC015B8CA7C00EC7869 /* CFIAttachmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFIAttachmentCell.xib; sourceTree = "<group>"; };
 		8499DD1015B0CC66006A4B61 /* SendBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SendBtn.png; sourceTree = "<group>"; };
 		8499DD1215B0CEEF006A4B61 /* AttachSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AttachSelected.png; sourceTree = "<group>"; };
 		8499DD1615B0D2D2006A4B61 /* SaveBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SaveBtn.png; sourceTree = "<group>"; };
@@ -389,9 +394,12 @@
 				84420B9615B75A6600EC7869 /* JUCollectionView.m */,
 				84420B9715B75A6600EC7869 /* JUCollectionView+Selection.h */,
 				84420B9815B75A6600EC7869 /* JUCollectionView+Selection.m */,
+				84420B9B15B75A6600EC7869 /* JUCollectionViewDelegate.h */,
 				84420B9915B75A6600EC7869 /* JUCollectionViewCell.h */,
 				84420B9A15B75A6600EC7869 /* JUCollectionViewCell.m */,
-				84420B9B15B75A6600EC7869 /* JUCollectionViewDelegate.h */,
+				84420BBD15B8CA2800EC7869 /* CFIAttachmentCell.h */,
+				84420BBE15B8CA2800EC7869 /* CFIAttachmentCell.m */,
+				84420BC015B8CA7C00EC7869 /* CFIAttachmentCell.xib */,
 			);
 			name = JUICollectionView;
 			sourceTree = "<group>";
@@ -552,6 +560,7 @@
 				8499DD2815B0EAEA006A4B61 /* ParagraphRightSelected.png in Resources */,
 				8499DD3015B0F956006A4B61 /* ToolbarAttachment.png in Resources */,
 				8499DD3415B0FB84006A4B61 /* mail10-1.png in Resources */,
+				84420BC115B8CA7C00EC7869 /* CFIAttachmentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +606,7 @@
 				84420B9C15B75A6600EC7869 /* JUCollectionView.m in Sources */,
 				84420B9D15B75A6600EC7869 /* JUCollectionView+Selection.m in Sources */,
 				84420B9E15B75A6600EC7869 /* JUCollectionViewCell.m in Sources */,
+				84420BBF15B8CA2800EC7869 /* CFIAttachmentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
