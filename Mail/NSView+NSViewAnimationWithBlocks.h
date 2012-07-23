@@ -8,14 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef NS_ENUM(NSInteger, NSViewAnimationTransition) {
+typedef NSInteger NSViewAnimationTransition;
+
+enum NSViewAnimationTransition{
     NSViewAnimationTransitionNone,
     NSViewAnimationTransitionFlipFromLeft,
     NSViewAnimationTransitionFlipFromRight,
     NSViewAnimationTransitionCurlUp,
     NSViewAnimationTransitionCurlDown,
 };
-typedef NS_OPTIONS(NSUInteger, NSViewAnimationOptions) {
+
+typedef NSUInteger NSViewAnimationOptions;
+
+enum NSViewAnimationOptions{
     NSViewAnimationOptionLayoutSubviews            = 1 <<  0,
     NSViewAnimationOptionAllowUserInteraction      = 1 <<  1, // turn on user interaction while animating
     NSViewAnimationOptionBeginFromCurrentState     = 1 <<  2, // start all views from current value, not initial value
@@ -41,7 +46,9 @@ typedef NS_OPTIONS(NSUInteger, NSViewAnimationOptions) {
     NSViewAnimationOptionTransitionFlipFromBottom  = 7 << 20,
 };
 
-typedef NS_ENUM(NSInteger, NSViewAnimationCurve) {
+typedef NSInteger NSViewAnimationCurve;
+
+enum NSViewAnimationCurve{
     NSViewAnimationCurveEaseInOut,         // slow at beginning and end
     NSViewAnimationCurveEaseIn,            // slow at beginning
     NSViewAnimationCurveEaseOut,           // slow at end

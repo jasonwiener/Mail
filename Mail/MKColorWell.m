@@ -20,6 +20,7 @@
 
 @implementation MKColorWell
 @synthesize animatePopover = _animatePopover;
+@synthesize delegate = _delegate;
 
 // NOTE you can subclass and define your own colors here
 - (NSArray *)colorsForPopover
@@ -141,6 +142,7 @@
     if (color.colorSpaceName != NSCalibratedWhiteColorSpace) {
         [self setColor:color];
         [popover performClose:self];
+        [_delegate colorWell:self didCloseWithColor:color];
     }
 }
 

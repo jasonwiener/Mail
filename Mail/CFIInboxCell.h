@@ -7,10 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "JAListViewItem.h"
 #import "DKHoverButtonCell.h"
 
-@interface CFIInboxCell : JAListViewItem {
+@interface CFIInboxCell : NSTableCellView {
     NSGradient *gradient;
     BOOL selected;
     NSTextField *textField;

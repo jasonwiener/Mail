@@ -90,7 +90,6 @@
     [self setNeedsDisplay:YES];
 }
 
-@synthesize selected;
 @synthesize subject;
 @synthesize bodyPreview;
 
