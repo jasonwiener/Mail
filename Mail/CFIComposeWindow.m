@@ -43,10 +43,20 @@
     [fontSizeController setContent:fontSizes];
     [self.fontButton setMenu:[CFIFontMenu sharedFontMenu]];
     [colorWell_ setDelegate:self];
+    [self buildSignature];
+}
+
+-(void)buildSignature {
+    [self.bodyText insertText:@"\n\n --\n Robert Widmann \n Sent with .Mail"];
+    [[self.bodyText textStorage] addAttribute: NSLinkAttributeName value:@"http://www.vanschneider.com/work/mail/" range:NSMakeRange(self.bodyText.attributedString.length-5, 5)];
+}
+
+-(NSString*)defaultSignature {
+    return @"\n\n --\n Robert Widmann \n Sent with .Mail";
 }
 
 -(BOOL)windowShouldClose:(id)sender {
-    if ([self.bodyText textStorage].string.length) {
+    if (![[self.bodyText textStorage].string isEqualToString:[self defaultSignature]]) {
         NSAlert* closeAlert = [NSAlert alertWithMessageText:@"Save this message as a draft?" defaultButton:@"Save" alternateButton:@"Discard" otherButton:@"Cancel" informativeTextWithFormat:@"This message contains unsaved changes and will be discarded if you don't save it."];
         [closeAlert beginSheetModalForWindow:self.window modalDelegate:self didEndSelector:@selector(publishedSuccessfullyDidEnd:returnCode:contextInfo:) contextInfo:(__bridge void *)((id)[[NSMutableDictionary alloc] init])];
         return NO;
@@ -63,19 +73,16 @@
         [self performSelector:@selector(close) withObject:nil afterDelay:1.0];
         [NSApp stopModal];
     }
-    else if (returnCode == NSAlertOtherReturn){
-    }
+
 }
 
 -(void)showFontMenu {
     
 }
-                                      
+
 -(void)windowWillClose:(NSNotification *)notification {
     [NSApp stopModal];
 }
-
-
 
 //- (BOOL)control:(NSControl*)control
 //       textView:(NSTextView*)textView
@@ -104,15 +111,22 @@
     }
 }
 -(void)send:(id)sender {
+    NSLog(@"sending");
     CTCoreMessage *msg = [[CTCoreMessage alloc] init];
-    [msg setTo:[NSSet setWithObject:@"widmannrobert@gmail.com"]];
-    [msg setFrom:[NSSet setWithObject:@"widmannrobert@gmail.com"]];
+    [msg setTo:[NSSet setWithObject:[CTCoreAddress addressWithName:@"Robert" email:@"widmannrobert@gmail.com"]]];
+    [msg setFrom:[NSSet setWithObject:[CTCoreAddress addressWithName:@"Robert" email:@"widmannrobert@gmail.com"]]];
     [msg setBody:self.bodyText.attributedString.string];
     [msg setSubject:[self.subjectField stringValue]];
     
-    [CTSMTPConnection sendMessage:msg server:@"smtp.gmail.com." username:@"widmannrobert@gmail.com"
-                         password:@"deer5cherry" port:993 useTLS:YES useAuth:YES error:nil];
-    [NSApp stopModal];
+    NSError *error = nil;
+    
+    if ([CTSMTPConnection canConnectToServer:@"smtp.gmail.com" username:@"widmannrobert@gmail.com" password:@"deer5cherry" port:993 useTLS:YES useAuth:YES error:&error]) {
+        NSLog(@"YES");
+        [CTSMTPConnection sendMessage:msg server:@"smtp.gmail.com" username:@"widmannrobert@gmail.com" password:@"deer5cherry" port:993 useTLS:YES useAuth:YES error:nil];
+    }
+    else {
+        NSLog(@"%@", [error localizedDescription]);
+    }
 }
  
 -(void)paragraphLeft:(NSButton*)sender {
