@@ -48,50 +48,115 @@
 @synthesize managedObjectContext = _managedObjectContext;
 
 -(IBAction)showAboutPanel:(id)sender {
-    if (!aboutPanel) {
-        BOOL successful = [NSBundle loadNibNamed:@"About" owner:self];
-        
-        // This makes the about panel the key window - gives it focus
-        [aboutPanel makeKeyAndOrderFront:nil];
-        
-        NSLog(@"About panel loaded with success status %d.", successful);
-        return;
-    }
-    
-    // The About panel is open, so just give it focus.
-    [aboutPanel makeKeyAndOrderFront:nil];
-    NSLog(@"About panel given focus.");
+//    if (!aboutPanel) {
+//        BOOL successful = [NSBundle loadNibNamed:@"About" owner:self];
+//        
+//        // This makes the about panel the key window - gives it focus
+//        [NSApp runModalForWindow: aboutPanel];
+//        [NSApp endSheet:aboutPanel];
+//        [aboutPanel orderOut: self];
+//        NSLog(@"About panel loaded with success status %d.", successful);
+//        return;
+//    }
+//    
+//    // The About panel is open, so just give it focus.
+//    [NSApp runModalForWindow: aboutPanel];
+//    [NSApp endSheet:aboutPanel];
+//    [aboutPanel orderOut: self];
+//    NSLog(@"About panel given focus.");
 
 }
 -(void)awakeFromNib {
-//        [self performSelector:@selector(startup)];
+    CGFloat xPos = NSWidth([[self.window screen] frame])/2 - NSWidth([self.window frame])/2;
+    CGFloat yPos = NSHeight([[self.window screen] frame])/2 - NSHeight([self.window frame])/2;
+    if (![self coreDataHasEntriesForEntityName:@"Accounts"]) {
+        [[NSApplication sharedApplication]setPresentationOptions:NSApplicationPresentationDefault];
+        [self.window setFrame:NSMakeRect(xPos, yPos, 550.0f, 400.0f) display:YES];
+        [self.window setContentView:accountWizard];
+        [self.window setStyleMask:(NSTitledWindowMask| NSMiniaturizableWindowMask|NSClosableWindowMask)];
+    }
+    else {
         [self.window addViewToTitleBar:[[NSSearchField alloc]initWithFrame:NSMakeRect(0, 0, 320, 44.0f)] atXPosition:CGRectGetWidth(self.window.frame)-345];
-        
         [self.window addViewToTitleBar:composeButton atXPosition:(CGRectGetWidth(self.window.frame)/2)-100];
         
         [self.window addViewToTitleBar:attachmentButton atXPosition:(CGRectGetWidth(self.window.frame)/2)-150];
         
         INAppStoreWindow *aWindow = (INAppStoreWindow*)self.window;
         aWindow.titleBarHeight = 40.0;
-        CGFloat xPos = NSWidth([[self.window screen] frame])/2 - NSWidth([self.window frame])/2;
-        CGFloat yPos = NSHeight([[self.window screen] frame])/2 - NSHeight([self.window frame])/2;
+        
         [self.window setFrame:NSMakeRect(xPos, yPos, NSWidth([self.window frame]), NSHeight([self.window frame])) display:YES];
         
         [[accountButton cell] setBackgroundColor:[NSColor colorWithCalibratedRed:51.0f/255.0f green:52.0f/255.0f blue:56.0f/255.0f alpha:1.0f]];
         
         [inboxTableView setRowHeight:120.0f];
+    }
 
-//    }
 }
 
--(void)startup {
-    INAppStoreWindow *aWindow = (INAppStoreWindow*)self.window;
-    aWindow.titleBarHeight = 20.0;
-    [aWindow setStyleMask:(NSTitledWindowMask |NSClosableWindowMask|NSMiniaturizableWindowMask)];
-    CGFloat xPos = NSWidth([[self.window screen] frame])/2 - NSWidth([self.window frame])/2;
-    CGFloat yPos = NSHeight([[self.window screen] frame])/2 - NSHeight([self.window frame])/2;
-    [self.window setFrame:NSMakeRect(xPos, yPos, 805, 522) display:YES animate:NO];
-    [aWindow setContentView:startupView];
+-(void)createAccountClicked:(id)sender {
+    if ([nameField stringValue].length && [emailField stringValue].length && [passwordField stringValue].length) {
+        [self.window setFrame:NSMakeRect(0, 0, 1090.0f, 600.0) display:YES animate:YES];
+        [self.window setStyleMask:(NSTitledWindowMask| NSMiniaturizableWindowMask|NSClosableWindowMask|NSFullScreenWindowMask)];
+        [self.window setContentView:mainView];
+        NSLog(@"The chosen name is %@, with the email address %@ and the password %@",[nameField stringValue],[emailField stringValue],[passwordField stringValue]);
+    }
+    else {
+        [self shakeWindowHorizontally:self.window duration:0.5 vigour:0.005f times:8];
+    }
+}
+
+- (void) shakeWindowHorizontally:(NSWindow *)inWindow duration:(float)inDuration vigour:(float)inVigour times:(int)inTimes {
+    
+    //	[self shakeWindowHorizontally:window duration:0.5 vigour:0.05 times:8];
+	
+	CAKeyframeAnimation *shakeAnimation = [CAKeyframeAnimation animation];
+	NSRect inFrame = [inWindow frame];
+	
+	CGMutablePathRef shakePath = CGPathCreateMutable();
+	CGPathMoveToPoint(shakePath, NULL, NSMinX(inFrame), NSMinY(inFrame));
+	int index;
+	for (index = 0; index < inTimes; ++index)
+	{
+		CGPathAddLineToPoint(shakePath, NULL, NSMinX(inFrame) - inFrame.size.width * inVigour, NSMinY(inFrame));
+		CGPathAddLineToPoint(shakePath, NULL, NSMinX(inFrame) + inFrame.size.width * inVigour, NSMinY(inFrame));
+	}
+	CGPathCloseSubpath(shakePath);
+	shakeAnimation.path = shakePath;
+	shakeAnimation.duration = inDuration;
+	
+	[inWindow setAnimations:[NSDictionary dictionaryWithObject:shakeAnimation forKey:@"frameOrigin"]];
+	[[inWindow animator] setFrameOrigin:inFrame.origin];
+	
+}
+
+-(NSView*)addAccountAccessoryView {
+    NSView *view = [[NSView alloc]initWithFrame:NSMakeRect(0, 0, 400, 100)];
+    return view;
+}
+
+-(void)accountSuccessfullyDidCreate:(NSAlert*)alert returnCode:(NSInteger)returnCode contextInfo:(id)context {
+        [NSApp endSheet:alert.window];
+}
+
+- (NSRect)window:(NSWindow *)window willPositionSheet:(NSWindow *)sheet usingRect:(NSRect)rect {
+    return NSMakeRect(NSMinX(rect), NSMinY(rect)*2, NSWidth(rect), NSHeight(rect));
+}
+
+- (BOOL)coreDataHasEntriesForEntityName:(NSString *)entityName {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:entity];
+    [request setFetchLimit:1];
+    NSError *error = nil;
+    NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (!results) {
+        NSLog(@"Fetch error: %@", error);
+        abort();
+    }
+    if ([results count] == 0) {
+        return NO;
+    }
+    return YES;
 }
 
 - (NSUInteger)numberOfCellsInCollectionView:(JUCollectionView *)view
@@ -247,7 +312,7 @@
         return _managedObjectModel;
     }
 	
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CD" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Mail_Data" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }

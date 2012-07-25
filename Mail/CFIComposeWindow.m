@@ -155,6 +155,42 @@
     
 }
 
+
+//-----------------
+//NSOpenPanel: Displaying a File Open Dialog in OS X 10.7
+//-----------------
+
+// Any ole method
+- (void)showAttachWindow:(id)sender {
+    
+    // Create a File Open Dialog class.
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+
+    // Enable options in the dialog.
+    [openDlg setCanChooseFiles:YES];
+    [openDlg setAllowsMultipleSelection:TRUE];
+    // Display the dialog box.  If the OK pressed,
+    // process the files.
+    [openDlg beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
+        
+        if (result == NSFileHandlingPanelOKButton) {
+            // Gets list of all files selected
+            NSArray *files = [openDlg URLs];
+            
+            // Loop through the files and process them.
+            for(int i = 0; i < [files count]; i++ ) {
+                
+                // Do something with the filename.
+                NSLog(@"File path: %@", [[files objectAtIndex:i] path]);
+                
+            }
+        }
+    }];
+
+    
+}
+
+
 -(IBAction)fontDidChange:(id)sender {
 }
 -(IBAction)fontSizeDidChange:(id)sender {

@@ -10,10 +10,13 @@
 #import "CFIInboxCell.h"
 #import "CFIComposeWindow.h"
 #import "JUCollectionView.h"
+#import "AMIndeterminateProgressIndicatorCell.h"
 
 @class CFIMenuView;
 
-@interface CFIAppDelegate : NSObject <NSApplicationDelegate, JUCollectionViewDataSource, JUCollectionViewDelegate, NSTableViewDataSource, NSTableViewDelegate> {
+@interface CFIAppDelegate : NSObject <NSApplicationDelegate, JUCollectionViewDataSource, JUCollectionViewDelegate, NSTableViewDataSource, NSTableViewDelegate, NSWindowDelegate> {
+    IBOutlet NSView *mainView;
+
     IBOutlet NSButton *attachmentButton;
     IBOutlet NSButton *composeButton;
     IBOutlet NSButton *accountButton;
@@ -25,6 +28,11 @@
     IBOutlet JUCollectionView *assetCollectionView;  // the container view in which the slides are positioned
     NSMutableArray *content;
     IBOutlet NSTableView *inboxTableView;
+    IBOutlet NSView *accountWizard;
+    
+    IBOutlet NSTextField *nameField;
+    IBOutlet NSTextField *emailField;
+    IBOutlet NSSecureTextField *passwordField;
 }
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -42,5 +50,6 @@
 -(IBAction)moveToAttachments:(id)sender;
 -(IBAction)saveAction:(id)sender;
 -(IBAction)showAboutPanel:(id)sender;
+-(IBAction)createAccountClicked:(id)sender;
 
 @end

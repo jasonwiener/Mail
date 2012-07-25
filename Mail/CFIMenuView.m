@@ -62,7 +62,7 @@
 
 -(void)awakeFromNib {
     self.line = [[NSBox alloc]initWithFrame:NSMakeRect(NSMinX(self.inboxButton.frame)+2, NSMinY(self.inboxButton.frame), NSWidth(self.inboxButton.frame)-4, 2.0f)];
-    [self.line setAutoresizingMask:(NSViewMinXMargin|NSViewMinYMargin)];
+    [self.line setAutoresizingMask:(NSViewMaxXMargin|NSViewMinYMargin)];
     [self addSubview:self.line];
     [self loopExcludingButton:self.inboxButton];
 }

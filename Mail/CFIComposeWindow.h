@@ -39,5 +39,6 @@
 -(IBAction)paragraphRight:(NSButton*)sender;
 -(IBAction)fontDidChange:(id)sender;
 -(IBAction)fontSizeDidChange:(id)sender;
+-(IBAction)showAttachWindow:(id)sender;
 
 @end

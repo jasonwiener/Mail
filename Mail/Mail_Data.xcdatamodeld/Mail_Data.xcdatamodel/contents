@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1803" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Accounts" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Email" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,11 +13,11 @@
     </entity>
     <entity name="Sender" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="emails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Email" inverseName="sender" inverseEntity="Email" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Email" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Sender" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Email" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Sender" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Accounts" positionX="-180" positionY="-126" width="128" height="90"/>
     </elements>
 </model>

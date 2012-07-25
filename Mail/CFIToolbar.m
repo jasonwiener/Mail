@@ -24,7 +24,9 @@
 {
     // Drawing code here.
     [[NSColor blackColor]set];
-    NSRectFill(self.bounds);
+    NSRectFill(NSMakeRect(0, 8, NSWidth(self.bounds), 40.0f));
+    [[NSColor colorWithPatternImage:[NSImage imageNamed:@"sendMarquee.png"]]set];
+    NSRectFill(NSMakeRect(0, 4, NSWidth(self.bounds), 4.0f));
 }
 
 @end

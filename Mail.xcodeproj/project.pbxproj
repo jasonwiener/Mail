@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8425753A15BB28DE0006D808 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8425753915BB28DE0006D808 /* AddressBook.framework */; };
+		842BEA6515BF56E300A536CE /* CFIClickThroughButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BEA6415BF56E300A536CE /* CFIClickThroughButton.m */; };
+		842BEA6D15BF660500A536CE /* sendMarquee.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BEA6C15BF660500A536CE /* sendMarquee.png */; };
+		842BEA7315BF841C00A536CE /* CreateBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BEA7015BF841C00A536CE /* CreateBtn@2x.png */; };
+		842BEA7415BF841C00A536CE /* SendBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BEA7115BF841C00A536CE /* SendBtn@2x.png */; };
+		842BEA7515BF841C00A536CE /* CreateBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 842BEA7215BF841C00A536CE /* CreateBtn.png */; };
+		842BEA7815BF8F1D00A536CE /* AMIndeterminateProgressIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BEA7715BF8F1C00A536CE /* AMIndeterminateProgressIndicatorCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		842DF0E515BA100C0007AEAA /* GData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842DF0E415BA100C0007AEAA /* GData.framework */; };
 		842DF12A15BA16FA0007AEAA /* ToolbarAttachment.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DF12915BA16FA0007AEAA /* ToolbarAttachment.png */; };
 		8437495415AD11F400157F9C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8437495315AD11F400157F9C /* Cocoa.framework */; };
@@ -100,6 +106,14 @@
 
 /* Begin PBXFileReference section */
 		8425753915BB28DE0006D808 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		842BEA6315BF56E300A536CE /* CFIClickThroughButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFIClickThroughButton.h; sourceTree = "<group>"; };
+		842BEA6415BF56E300A536CE /* CFIClickThroughButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFIClickThroughButton.m; sourceTree = "<group>"; };
+		842BEA6C15BF660500A536CE /* sendMarquee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sendMarquee.png; sourceTree = "<group>"; };
+		842BEA7015BF841C00A536CE /* CreateBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreateBtn@2x.png"; sourceTree = "<group>"; };
+		842BEA7115BF841C00A536CE /* SendBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SendBtn@2x.png"; sourceTree = "<group>"; };
+		842BEA7215BF841C00A536CE /* CreateBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CreateBtn.png; sourceTree = "<group>"; };
+		842BEA7615BF8F1C00A536CE /* AMIndeterminateProgressIndicatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIndeterminateProgressIndicatorCell.h; sourceTree = "<group>"; };
+		842BEA7715BF8F1C00A536CE /* AMIndeterminateProgressIndicatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIndeterminateProgressIndicatorCell.m; sourceTree = "<group>"; };
 		842DF0E415BA100C0007AEAA /* GData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GData.framework; sourceTree = "<group>"; };
 		842DF12915BA16FA0007AEAA /* ToolbarAttachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolbarAttachment.png; sourceTree = "<group>"; };
 		8437494F15AD11F400157F9C /* .Mail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .Mail.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +236,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842BEA7915BF8F2F00A536CE /* AMIndeterminateProgressIndicatorCell */ = {
+			isa = PBXGroup;
+			children = (
+				842BEA7615BF8F1C00A536CE /* AMIndeterminateProgressIndicatorCell.h */,
+				842BEA7715BF8F1C00A536CE /* AMIndeterminateProgressIndicatorCell.m */,
+			);
+			name = AMIndeterminateProgressIndicatorCell;
+			sourceTree = "<group>";
+		};
 		8437494415AD11F300157F9C = {
 			isa = PBXGroup;
 			children = (
@@ -274,12 +297,15 @@
 				84420BCA15B8FE4900EC7869 /* Mail_Data.xcdatamodeld */,
 				8437496515AD11F400157F9C /* CFIAppDelegate.h */,
 				8437496615AD11F400157F9C /* CFIAppDelegate.m */,
+				842BEA6315BF56E300A536CE /* CFIClickThroughButton.h */,
+				842BEA6415BF56E300A536CE /* CFIClickThroughButton.m */,
 				843749B315AE4B2B00157F9C /* CFIMailBodyPane.h */,
 				843749B415AE4B2C00157F9C /* CFIMailBodyPane.m */,
 				8437497E15AD1FF100157F9C /* CFIMenuView.h */,
 				8437497F15AD1FF100157F9C /* CFIMenuView.m */,
 				8499DD4615B11E0E006A4B61 /* CFIImageView.h */,
 				8499DD4715B11E0F006A4B61 /* CFIImageView.m */,
+				842BEA7915BF8F2F00A536CE /* AMIndeterminateProgressIndicatorCell */,
 				84F9380D15BCE1A700781478 /* SSKeychain */,
 				8437499615AE052700157F9C /* Inbox */,
 				8499DD8715B4F71D006A4B61 /* JUICollectionView */,
@@ -296,6 +322,7 @@
 		8437495A15AD11F400157F9C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				842BEA6C15BF660500A536CE /* sendMarquee.png */,
 				8499DD3315B0FB84006A4B61 /* mail10-1.png */,
 				843749A815AE3F0000157F9C /* ToolbarCompose.png */,
 				842DF12915BA16FA0007AEAA /* ToolbarAttachment.png */,
@@ -404,7 +431,10 @@
 		84D8AFCF15AFABEE006E58E2 /* Menu Bar */ = {
 			isa = PBXGroup;
 			children = (
+				842BEA7015BF841C00A536CE /* CreateBtn@2x.png */,
+				842BEA7215BF841C00A536CE /* CreateBtn.png */,
 				8499DD1015B0CC66006A4B61 /* SendBtn.png */,
+				842BEA7115BF841C00A536CE /* SendBtn@2x.png */,
 				8499DD1615B0D2D2006A4B61 /* SaveBtn.png */,
 				8499DD1215B0CEEF006A4B61 /* AttachSelected.png */,
 				8499DD1D15B0E93C006A4B61 /* ParagraphCenter.png */,
@@ -561,6 +591,10 @@
 				84420BC115B8CA7C00EC7869 /* CFIAttachmentCell.xib in Resources */,
 				842DF12A15BA16FA0007AEAA /* ToolbarAttachment.png in Resources */,
 				84F9380415BCCA8500781478 /* About.xib in Resources */,
+				842BEA6D15BF660500A536CE /* sendMarquee.png in Resources */,
+				842BEA7315BF841C00A536CE /* CreateBtn@2x.png in Resources */,
+				842BEA7415BF841C00A536CE /* SendBtn@2x.png in Resources */,
+				842BEA7515BF841C00A536CE /* CreateBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +637,8 @@
 				84420BBF15B8CA2800EC7869 /* CFIAttachmentCell.m in Sources */,
 				84420BCC15B8FE4900EC7869 /* Mail_Data.xcdatamodeld in Sources */,
 				84F9380C15BCE1A100781478 /* SSKeychain.m in Sources */,
+				842BEA6515BF56E300A536CE /* CFIClickThroughButton.m in Sources */,
+				842BEA7815BF8F1D00A536CE /* AMIndeterminateProgressIndicatorCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
